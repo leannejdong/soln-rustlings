@@ -6,7 +6,8 @@
 fn main() {
     let mut res = 42;
     let option = Some(12);
-    for x in option {
+   // using if let over pattern matching for single-match
+    if let Some(x) = option {
         res += x;
     }
     println!("{}", res);
